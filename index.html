@@ -502,6 +502,97 @@
             border-bottom: none;
         }
 
+        .client-work {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e6f3ff 100%);
+            padding: 100px 0;
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .client-card {
+            display: block;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .client-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .client-thumb {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .client-thumb::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.15), transparent 60%);
+            pointer-events: none;
+        }
+
+        .client-thumb iframe,
+        .client-thumb video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .play-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            color: #ff6b6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .client-card:hover .play-icon {
+            transform: scale(1.1);
+        }
+
+        .client-meta {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .client-meta h3 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .client-meta p {
+            font-size: 0.95rem;
+            color: #5a6c7d;
+        }
+
         /* Portfolio Section */
         .portfolio {
             padding: 100px 0;
@@ -611,6 +702,11 @@
                 gap: 20px;
             }
 
+            .client-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -618,6 +714,10 @@
 
         @media (max-width: 1200px) {
             .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .client-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -631,6 +731,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#client-work">Client Work</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -815,6 +916,60 @@
         </div>
     </section>
 
+   <!-- Client Work Section -->
+    <section id="client-work" class="client-work">
+        <div class="container">
+            <h2 class="section-title">Client Work</h2>
+            <div class="client-grid">
+                <div class="client-card">
+                    <div class="client-thumb">
+                        <iframe src="https://drive.google.com/file/d/1D_R_iq9dWWx2IdnAZVVZKudyWstxD_sb/preview" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="client-meta">
+                        <h3>Instagram collab</h3>
+                        <p>Instagram Reel</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-thumb">
+                        <iframe src="https://drive.google.com/file/d/1mznAUjcQtyOhK_etIwnX7Yyc6vErJNP3/preview" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="client-meta">
+                        <h3>physicswallah tutor video edited</h3>
+                        <p>Instagram Reel</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-thumb">
+                        <iframe src="https://drive.google.com/file/d/1kU9FLkZpp_yXFXwIHPKwVuoWyvvQCMY4/preview" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="client-meta">
+                        <h3>physicswallah teaching english</h3>
+                        <p>Instagram Reel</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-thumb">
+                        <iframe src="https://drive.google.com/file/d/1KwmSWP-PgWyMoyFBU6HrtNE1oyNvl_KI/preview" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="client-meta">
+                        <h3>about car loan</h3>
+                        <p>Instagram Reel</p>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-thumb">
+                        <iframe src="https://drive.google.com/file/d/1B65BFRPshucYZpXOBVISmnyNJO_lcAw0/preview" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="client-meta">
+                        <h3>instagram coach</h3>
+                        <p>Instagram Reel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
    <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio">
     <div class="container">
@@ -921,7 +1076,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.skill-category, .stat').forEach(el => {
+        document.querySelectorAll('.skill-category, .stat, .client-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
